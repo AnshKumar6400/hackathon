@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/2ndpage.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="site-headers">
+      <nav>
+        <div class="logo">
+          <h1>Temperature and Humidity Detector</h1>
+        </div>
+        <div class="menu">
+          <ul>
+            <li class="list">Contact us</li>
+            <li class="list">About us</li>
+            <li class="list">
+              <div class="dropdown">
+                <button class="dropbtn">languages</button>
+                <div class="dropdown-content">
+                  <a href="#">Hindi</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+<div class="container2">
+    <div class="result">
+        <h1 class="head"><%=data.location%><img src="https://openweathermap.org/img/wn/<%=data.icon%>@2x.png"></h1>
+        <h1 >Weather Report</h1>
+        <h2>Temp<strong class="val">:<%=data.Temperature%>°C</strong></h2>
+        <h2>Humidity<strong class="val">:<%=data.humidity%>%</strong></h2>
+        <h3><strong class="val2"><%=data.Weather%>  expected</strong></h3>
+      </div>
+</div>
+    </header>
+  </body>
+</html>
