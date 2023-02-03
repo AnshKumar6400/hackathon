@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  background-color: aliceblue;
+}
+.container {
+  background-color: rgb(222, 222, 222);
+  min-width: 100%;
+  padding: 10px;
+  font-size: 2rem;
+}
+.container h1 {
+  margin: 5px;
+  text-transform: capitalize;
+}
+.container h3 {
+  margin: 5px;
+  text-transform: capitalize;
+}
+.container h6 {
+  margin: 5px;
+}
+.btn {
+    border: none !important;;
+  padding: 10px;
+  margin: 5px;
+
+
+}
+.btn:hover {
+    margin: 6px;
+    border: 10px;
+    border-color: rgb(11, 74, 74);
+    box-shadow: 0 0 5px 0px;
+    border-radius: 5px;
+}

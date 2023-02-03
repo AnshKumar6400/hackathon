@@ -6,43 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/1stpage.css" />
+    <style>
+      .box {
+        visibility: hidden;
+      }
+    </style>
   </head>
   <body>
+    <center><div id="google_translate_element"></div></center>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script src="views\config.js"></script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
     <header class="site-headers">
+      <div class="custom-shape-divider-bottom-1674859026">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
       <nav>
         <div class="logo">
           <h1>Temperature and Humidity Detector</h1>
         </div>
         <div class="menu">
           <ul>
-            <li class="list">Contact us</li>
             <li class="list">About us</li>
-            <li class="list">
-                <div class="dropdown">
-                    <button class="dropbtn">languages</button>
-                    <div class="dropdown-content">
-                      <a href="#">Hindi</a>
-                      <a href="#">Link 2</a>
-                      <a href="#">Link 3</a>
-                    </div>
-                  </div>
-            </li>
+            <li class="list">Contact us:+916301924850</li>
+
+            <form action="/docs" method="post" class="btn">
+              <button class="bot">Docs</button>
+            </form>
           </ul>
         </div>
       </nav>
-    
-      <section>
+
+      <section class="sec">
         <div class="rightside">
           <h1>Welcome to this website</h1>
           <p>Get the accurate forecast decisions from here</p>
         </div>
-       
       </section>
-      <form class="location" method="post" action="/" >
+      <form class="location" method="post" action="/">
         <label for="location">Enter your location</label>
-        <input type="text" name="location" class="view">
+        <input type="text" name="location" class="view" />
       </form>
     </header>
   </body>
   <script src="app.js"></script>
+  <script type="text/javascript">
+    (function () {
+      var s = document.createElement("script");
+      s.type = "text/javascript";
+      s.async = true;
+      s.id = "lsInitScript";
+      s.src =
+        "https://livesupporti.com/Scripts/clientAsync.js?acc=cfcc5660-6efc-4210-98a9-f26b0a7b4dd6&skin=Air";
+      var scr = document.getElementsByTagName("script")[0];
+      scr.parentNode.appendChild(s, scr);
+    })();
+  </script>
 </html>

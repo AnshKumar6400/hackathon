@@ -11,34 +11,102 @@
     <header class="site-headers">
       <nav>
         <div class="logo">
-          <h1>Temperature and Humidity Detector</h1>
+          <h1 class="green">Temperature and Humidity Detector</h1>
         </div>
         <div class="menu">
           <ul>
-            <li class="list">Contact us</li>
-            <li class="list">About us</li>
-            <li class="list">
-              <div class="dropdown">
-                <button class="dropbtn">languages</button>
-                <div class="dropdown-content">
-                  <a href="#">Hindi</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-              </div>
-            </li>
+            <form action="/home" class="list" name="btn" method="post">
+              <button class="btn" name="HOME" type="submit">HOME</button>
+            </form>
+              <li class="list">
+                <div class="dropdown"></div>
+              </li>
+            </post>
           </ul>
         </div>
       </nav>
-<div class="container2">
-    <div class="result">
-        <h1 class="head"><%=data.location%><img src="https://openweathermap.org/img/wn/<%=data.icon%>@2x.png"></h1>
-        <h1 >Weather Report</h1>
-        <h2>Temp<strong class="val">:<%=data.Temperature%>°C</strong></h2>
-        <h2>Humidity<strong class="val">:<%=data.humidity%>%</strong></h2>
-        <h3><strong class="val2"><%=data.Weather%>  expected</strong></h3>
+      <div class="container2">
+
+        <div class="sun"></div>
+        
+        <div class="result">
+          <h1 class="head">
+            <%=data.location%><img
+              src="https://openweathermap.org/img/wn/<%=data.icon%>@2x.png"
+            />
+          </h1>
+
+          <h1>Weather Report</h1>
+          <h3><%=data.date%> <%=data.monthName%></h3>
+          <h2>Temp<strong class="val">:<%=data.Temperature%>°C</strong></h2>
+          <h2>Humidity<strong class="val">:<%=data.humidity%>%</strong></h2>
+          <br />
+          <h3><%=data.date1%> <%=data.monthName1%></h3>
+          <h2>Temp<strong class="val">:<%=data.Temperature1%>°C</strong></h2>
+          <h2>Humidity<strong class="val">:<%=data.humidity1%>%</strong></h2>
+          <br />
+          <h3><%=data.date2%> <%=data.monthName2%></h3>
+          <h2>Temp<strong class="val">:<%=data.Temperature2%>°C</strong></h2>
+          <h2>Humidity<strong class="val">:<%=data.humidity2%>%</strong></h2>
+          </h3>
+        </div>
+        <div class="result2">
+          
+          <%if(data.month==0){%>
+            <h2>Suggested Crops</h2>
+            <ul class="croplist">
+              <h3><a class="w" href="watermelon.html">Watermelon</a></h3>
+              <ul class="slist">
+                <h6>Bihar</h6>
+                    <h6>Haryana</h6>
+                    <h6>Uttar Pradesh</h6>
+                    <h6>Punjab</h6>
+                    <h6>Odisha</h6>
+                    <h6>Assam</h6>
+                    <h6>Andhra Pradesh</h6>
+                    <h6>Telangana</h6>
+              </ul>
+              <h3><a class="w" href="google.com">Bottle Gourd <a></h3>
+            
+            <ul class="slist">
+              <h6>Andhra Pradesh</h6>
+                  <h6>Karnataka</h6>
+                  <h6>West Bengal</h6>
+                  <h6>Rajasthan</h6>
+                  <h6>Odisha</h6>
+                  <h6>Tamil Nadu</h6>
+            </ul>
+            </ul>
+          <%}else if(data.month==1){ %>
+            <h2>Suggested Crops</h2>
+            <ul class="croplist">
+              <h3><a class="w" href="google.com">Watermelon</a></h3>
+              <ul class="slist">
+                <h6>Andhra Pradesh</h6>
+                    <h6>Karnataka</h6>
+                    <h6>West Bengal</h6>
+                    <h6>Rajasthan</h6>
+                    <h6>Odisha</h6>
+                    <h6>Tamil Nadu</h6>
+              </ul>
+              <h3><a class="w" href="google.com">Ber <a></h3>
+            </ul>
+           <% }  else if(data.month==1){ %>
+            <ul>
+              <h3>Watermelon cuivation</h3>
+              <h3>Bottle Gourd Cultivation</h3>
+            </ul>
+         <% }%>
+            
+        </div>
+        <div class="result3">
+          <h1>NPK DATA</h1>
+          <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/250296/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=50&type=line&update=15">
+        </div>
+
+        </div>
       </div>
-</div>
     </header>
   </body>
+  <script src="app.js"></script>
 </html>
